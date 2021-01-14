@@ -45,13 +45,13 @@ function ampforwp_analytics() {
 			$ampforwp_ga_fields = preg_replace('/\n\s*\n/', '', $ampforwp_ga_fields);
 	 		?>
 	 		<amp-analytics <?php if(ampforwp_get_data_consent()){?>data-block-on-consent <?php } ?> type="gtag" id="analytics1">
-	 		<script type="application/json">
+	 		<script type="application/ld+json">
 				<?php echo $ampforwp_ga_fields; ?>
 			</script>
 			</amp-analytics>
 	 		<?php } else { ?>
 			<amp-analytics <?php if(ampforwp_get_data_consent()){?>data-block-on-consent <?php } ?> type="gtag" id="analytics1" data-credentials="include" >
-				<script type="application/json">
+				<script type="application/ld+json">
 					<?php echo $ampforwp_ga_fields; ?>
 				</script>
 			</amp-analytics>
